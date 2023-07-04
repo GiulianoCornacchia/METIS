@@ -1,6 +1,7 @@
 # One-Shot Traffic Assignment with Forward-Looking Penalization
 
-<img src="https://i.ibb.co/GW4XRV3/METIS.png" alt="METIS" border="0" width="300" height="200">
+
+<img src="https://i.ibb.co/4JdNT9z/METIS.png" alt="METIS" border="0" width="300" height="200">
 
 Authors: Giuliano Cornacchia, Mirco Nanni, and Luca Pappalardo.
 
