@@ -41,6 +41,9 @@ Traffic assignment (TA) is crucial in optimizing transportation systems and cons
 
 1. Install the required dependencies in the provided requirements.txt
 2. Execute the metis.py script to perform the traffic assignment as `python metis.py [arguments]`
+For example:
+     ` python metis.py -d demand.json -n network.net.xml -o ./output/ -i metis -s 2 -p 0.01`
+
 
 Parameter Description:
 
@@ -56,6 +59,7 @@ Parameter Description:
 | eps         | Epsilon value used in the KMD algorithm.                              | No       | 0.3           | `-e 0.3`           |
 | out         | Output directory path to save the results.                            | Yes      | "./"          | `-o ./output/`     |
 | identifier  | Identifier for the output files.                                      | No       | "metis"       | `-i metis_results` |
+
 
 
 3. To simulate with the traffic simulator SUMO the impact of a collection of routes on CO2 emissions, execute the following command:
