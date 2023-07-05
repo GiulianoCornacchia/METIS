@@ -82,7 +82,8 @@ applying a penalty factor $p$: $w(e) \leftarrow w(e) \cdot (1+p)$. The penalizat
 traverse that edge. This penalization discourages the selection of edges that vehicles are likely to traverse, promoting alternative
 routes and a balanced distribution of traffic.
 
-<div class="center"> <img src="https://i.ibb.co/S68gDxn/FLEP.png" alt="FLEP" border="0" height="200"></div>
+<center><img src="https://i.ibb.co/S68gDxn/FLEP.png" alt="FLEP" border="0" height="200"></center>
+
 
 ## Setup
 
