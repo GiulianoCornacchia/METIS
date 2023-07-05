@@ -68,6 +68,22 @@ Parameter Description:
 
 ## HOW DOES METIS WORK?
 
+
+### FLEP (Forward-Looking Edge Penalization)
+
+FLEP is an innovative approach designed to optimize routing decisions in transportation systems. 
+
+In traditional routing algorithms, the entire previously assigned route is penalized when making new routing decisions. However, FLEP takes a more precise and dynamic approach. Instead of penalizing the entire route, FLEP estimates the position of each vehicle at a given time instant and applies penalties only to the unvisited edges. This enables a more accurate representation of real-time traffic conditions and allows for better-informed routing decisions.
+
+Assuming that a vehicle departed $t$ seconds ago, FLEP computes the distance it has travelled during $t$ seconds, assuming that the vehicle travelled at a speed of \frac{max\_speed}{s} on each edge, where $s$ is a slowdown parameter accounting for reduced speeds on edges due to the presence of other vehicles and various
+events like traffic lights. 
+Then, FLEP modifies the weights $w(e)$ assigned to the edges that the vehicle is expected to traverse by
+applying a penalty factor $p$: $w(e) \leftarrow w(e) \cdot (1+p)$. The penalization is cumulative, i.e., the edge is penalized for each vehicle that will
+traverse that edge. This penalization discourages the selection of edges that vehicles are likely to traverse, promoting alternative
+routes and a balanced distribution of traffic.
+
+<div class="center"> <img src="https://i.ibb.co/S68gDxn/FLEP.png" alt="FLEP" border="0" height="200"></div>
+
 ## Setup
 
 ## How to install and configure SUMO (Simulation of Urban MObility) 🚗🚙🛻
