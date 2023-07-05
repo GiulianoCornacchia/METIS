@@ -58,6 +58,9 @@ Parameter Description:
 | identifier  | Identifier for the output files.                                      | No       | "metis"       | `-i metis_results` |
 
 
+3. To simulate with the traffic simulator SUMO the impact of a collection of routes on CO2 emissions, execute the following command:
+
+
 
 ## HOW DOES METIS WORK?
 
