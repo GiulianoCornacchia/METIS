@@ -84,7 +84,7 @@ METIS achieves this through three interconnected phases:
 These phases work together in METIS to optimize routing decisions. FLEP ensures accurate penalization based on real-time occupancy, KMD generates diverse candidate routes, and route scoring evaluates the suitability of each route. This integrated approach improves trip distribution, reduces congestion, and ultimately enhances the efficiency of urban transportation networks.
 
 
-### FLEP (Forward-Looking Edge Penalization)
+### 1. FLEP (Forward-Looking Edge Penalization)
 
 FLEP is an innovative approach designed to optimize routing decisions in transportation systems. 
 
