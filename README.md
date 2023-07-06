@@ -45,7 +45,7 @@ Traffic assignment (TA) is crucial in optimizing transportation systems and cons
 1. Install the required dependencies in the provided requirements.txt
 2. Execute the metis.py script to perform the traffic assignment as `python metis.py [arguments]` <br>
 For example: <br>
-     `python metis.py -d demand.json -n network.net.xml -o ./output/ -i metis -s 2 -p 0.01`
+  `python metis.py -d demand.json -n network.net.xml -o ./output/ -i metis -s 2 -p 0.01`
 
 
 Parameter Description:
@@ -54,9 +54,9 @@ Parameter Description:
 |-------------|----------------------------------------------------------------------|----------|---------------|--------------------|
 | demand      | Path to the file containing the mobility demand.                      | Yes      | N/A           | `-d demand.json`   |
 | net         | Path to the SUMO road network file.                                   | Yes      | N/A           | `-n network.net.xml` |
-| tilesize    | Tile size used for partitioning the road network (in meters).                     | No       | 1000          | `-t 1000`          |
-| slowfactor  | Slow factor used in the FLEP algorithm.                               | No       | 2             | `-s 2`             |
-| p           | Penalization factor used in the FLEP algorithm.                  | No       | 0.01          | `-p 0.01`          |
+| tilesize    | Tile size used for partitioning the road network (in meters).         | No       | 1000          | `-t 1000`          |
+| slowdown  | Slowdown parameter used in the FLEP algorithm.                          | No       | 2             | `-s 2`             |
+| p           | Penalization factor used in the FLEP algorithm.                       | No       | 0.01          | `-p 0.01`          |
 | attribute   | Name of the attribute representing the edge property in the graph.    | No       | "traveltime"  | `-a traveltime`    |
 | k           | Number of candidates generated using KMD (KMDNSP).                    | No       | 3             | `-k 3`             |
 | eps         | Epsilon value used in the KMD algorithm.                              | No       | 0.3           | `-e 0.3`           |
