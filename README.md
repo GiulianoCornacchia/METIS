@@ -71,6 +71,18 @@ Parameter Description:
 
 ## HOW DOES METIS WORK?
 
+METIS is a one-shot Traffic Assignment algorithm designed to optimize routing decisions in transportation systems. It aims to minimize CO2 emissions and improve overall network performance by assigning routes to trips.
+
+METIS achieves this through three interconnected phases:
+
+1. FLEP (Forward-Looking Edge Penalization): FLEP estimates the position of each vehicle and applies penalties only to unvisited edges in real-time. By considering the dynamic traffic conditions, FLEP ensures accurate penalization, leading to more informed routing decisions.
+
+2. KMD (K-most diverse near shortest path): KMD (a state-of-the-art AR method, see X) generates a set of candidate routes between the trip's origin and destination. By considering multiple destinations and computing the shortest paths, KMD provides a range of potential routes for assignment.
+
+3. Route Scoring: The route scoring phase assigns scores to the candidate routes based on various factors, including the K-road measure and road capacity. This measure characterizes the routes in terms of their constituent edges, allowing for evaluation based on origin, destination, and road capacity. The scoring function helps select the most optimal route for assignment.
+
+These phases work together in METIS to optimize routing decisions. FLEP ensures accurate penalization based on real-time occupancy, KMD generates diverse candidate routes, and route scoring evaluates the suitability of each route. This integrated approach improves trip distribution, reduces congestion, and ultimately enhances the efficiency of urban transportation networks.
+
 
 ### FLEP (Forward-Looking Edge Penalization)
 
@@ -88,6 +100,14 @@ routes and a balanced distribution of traffic.
 <div align="center">
   <img src="./imgs/FLEP.png" height="200" />
 </div>
+
+
+
+### KMD
+
+
+### Route Scoring
+
 
 ## Setup
 
