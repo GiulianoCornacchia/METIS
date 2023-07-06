@@ -1,7 +1,10 @@
 # One-Shot Traffic Assignment with Forward-Looking Penalization
 
+<div align="center">
+  <img src="./imgs/METIS.PNG" height="200" />
+</div>
 
-<img src="https://i.ibb.co/4JdNT9z/METIS.png" alt="METIS" border="0" width="300" height="200">
+____
 
 Authors: Giuliano Cornacchia, Mirco Nanni, and Luca Pappalardo.
 
@@ -81,8 +84,9 @@ applying a penalty factor $p$: $w(e) \leftarrow w(e) \cdot (1+p)$. The penalizat
 traverse that edge. This penalization discourages the selection of edges that vehicles are likely to traverse, promoting alternative
 routes and a balanced distribution of traffic.
 
-<center><img src="https://i.ibb.co/S68gDxn/FLEP.png" alt="FLEP" border="0" height="200"></center>
-
+<div align="center">
+  <img src="./imgs/FLEP.png" height="200" />
+</div>
 
 ## Setup
 
