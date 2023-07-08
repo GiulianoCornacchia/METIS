@@ -173,7 +173,7 @@ We evaluate METIS against several one-shot Traffic Assignement solutions, both i
 | KD          | 𝑘-shortest disjointed paths: Returns alternative non-overlapping paths (with no common edges).                                                                      |
 | PLA         | Plateau: Builds shortest-path trees from the origin and destination and identifies common branches (plateaus) to generate alternative paths.                        |
 | KMDNSP      | 𝑘-Most Diverse Near Shortest Paths: Generates alternative paths with high dissimilarity while adhering to a user-defined cost threshold.                               |
-| DUA         | Dijkstra's algorithm with Upper-bound Avoidance: Assigns weights to edges based on a weight factor and computes the fastest path while avoiding edges with weights exceeding a certain threshold. |
+
 | FASTEST     | Computes the fastest path between the origin and destination assuming free-flow travel times.                                                                    |
 
 To apply one of the baseline to a mobility demand use `python compute_matrix.py [arguments]` <br>
@@ -191,7 +191,7 @@ Parameter Description:
 | p           | The penalization factor for PP algorithm.                                                              | No       | 0             | `-p 0.1`                |
 | u           | The randomization factor for GR algorithm.                                                             | No       | 0             | `-u 0.2`                |
 | e           | The randomization factor for PR and KMDNSP algorithms.                                                 | No       | 0             | `-e 0.3`                |
-| w           | The weight factor for DUA and PLATEAU algorithms.                                                      | No       | 0             | `-w 0.5`                |
+| w           | The weight factor for PLATEAU algorithm.                                                      | No       | 0             | `-w 0.5`                |
 | t           | The number of threads (subprocesses) to run in parallel.                                              | Yes      | N/A           | `-t 4`                  |
 | out         | Output directory path to save the results.                                                            | Yes      | N/A           | `-o ./output/`          |
 | identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
