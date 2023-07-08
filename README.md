@@ -20,9 +20,13 @@ We employ SUMO, a mobility simulator, to simulate the impact of the routes gener
 
  - [About](#about)
  
- - [Abstract](#usage)
+ - [Abstract](#abstract)
+   
+ - [Usage](#usage)
 
- - [HOW DOES METIS WORK?](#ref)
+ - [How does METIS work?](#metis)
+
+ - [Setup](#setup)
 
 ---
 
