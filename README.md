@@ -19,9 +19,14 @@ Affiliations:<br>
 <sup>1</sup> University of Pisa, Pisa, Italy <br>
 <sup>2</sup> ISTI-CNR, Pisa, Italy
 ____
-____
-  
+
+<div align="center">
+  <img src="./imgs/preprint.PNG" />
+</div>
+
 Pre-print available [here](https://arxiv.org/abs/2306.13704).
+____
+
 
 
 This repository contains the Python code necessary to replicate the analysis conducted in our work on METIS, a cooperative, one-shot Traffic Assignment (TA) algorithm. METIS utilizes alternative routing, edge penalization, and informed route scoring techniques to assign routes to trips with the goal of reducing the overall CO2 emissions.
