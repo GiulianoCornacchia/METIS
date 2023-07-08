@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>One-Shot Traffic Assignment with Forward-Looking Penalization </h1>
+  <h2>One-Shot Traffic Assignment with Forward-Looking Penalization </h2>
 </div>
 
 
