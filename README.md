@@ -20,8 +20,8 @@ Affiliations:<br>
 <sup>2</sup> ISTI-CNR, Pisa, Italy
 ____
 
-<div align="center">
-  <img src="./imgs/preprint.PNG" />
+<div align="left">
+  <img src="./imgs/preprint.PNG" height="100"/>
 </div>
 
 Pre-print available [here](https://arxiv.org/abs/2306.13704).
@@ -42,7 +42,6 @@ We employ SUMO, a mobility simulator, to simulate the impact of the routes gener
  - [How does METIS work?](#metis)
  - [Baselines](#baselines)
  - [Setup](#setup)
-
 ---
 
 
