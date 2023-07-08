@@ -147,14 +147,16 @@ By evaluating the route score using this formula, METIS can prioritize routes th
 ## Baselines
 We evaluate METIS against several one-shot Traffic Assignement solutions, both individual and collective. More in detail, we consider the following baseline algorithms:
 
-1. PP (Path Penalization): Generates alternative routes by penalizing the weights of edges contributing to the fastest path.
-2. GR (Graph Randomization): Generates alternative paths by randomizing the weights of all edges in the road network.
-3. PR (Path Randomization): Generates alternative paths by randomizing only the weights of the edges that were part of the previously computed path.
-4. KD (k-shortest disjointed paths): Returns alternative non-overlapping paths (with no common edges).
-5. PLA (Plateau): Builds shortest-path trees from the origin and destination and identifies common branches (plateaus) to generate alternative paths.
-6. KMD (k-Most Diverse Near Shortest Paths): Generates alternative paths with high dissimilarity while adhering to a cost threshold.
-7. FASTEST (AON): Computes the fastest path assuming free-flow travel times.
-
+| Algorithm   | Description                                                                                           |
+|-------------|-------------------------------------------------------------------------------------------------------|
+| PP          | Path Penalization: Generates alternative routes by penalizing the weights of edges contributing to the fastest path.                                                |
+| GR          | Graph Randomization: Generates alternative paths by randomizing the weights of all edges in the road network.                                                     |
+| PR          | Path Randomization: Generates alternative paths by randomizing only the weights of the edges that were part of the previously computed path.                       |
+| KD          | 𝑘-shortest disjointed paths: Returns alternative non-overlapping paths (with no common edges).                                                                      |
+| PLA         | Plateau: Builds shortest-path trees from the origin and destination and identifies common branches (plateaus) to generate alternative paths.                        |
+| KMDNSP      | 𝑘-Most Diverse Near Shortest Paths: Generates alternative paths with high dissimilarity while adhering to a user-defined cost threshold.                               |
+| DUA         | Dijkstra's algorithm with Upper-bound Avoidance: Assigns weights to edges based on a weight factor and computes the fastest path while avoiding edges with weights exceeding a certain threshold. |
+| FASTEST     | Computes the fastest path between the origin and destination assuming free-flow travel times.                                                                    |
 
 To apply one of the baseline to a mobility demand use `python compute_matrix.py [arguments]` <br>
 For example: <br>
@@ -175,6 +177,9 @@ Parameter Description:
 | t           | The number of threads (subprocesses) to run in parallel.                                              | Yes      | N/A           | `-t 4`                  |
 | out         | Output directory path to save the results.                                                            | Yes      | N/A           | `-o ./output/`          |
 | identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
+
+
+
 
 
 
