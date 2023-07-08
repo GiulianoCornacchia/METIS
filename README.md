@@ -145,7 +145,7 @@ By evaluating the route score using this formula, METIS can prioritize routes th
 
 
 ## Baselines
-We evaluate METIS against several one-shot Traffic Assignement solutions, both individual and collective. More in detail, we consider the following baseline algorithms:
+We evaluate METIS against several one-shot Traffic Assignement solutions, both individual and collective in terms of road coverage, redundancy, total CO2 (see sect. measures for detail). More precisely, we consider the following baseline algorithms:
 
 | Algorithm   | Description                                                                                           |
 |-------------|-------------------------------------------------------------------------------------------------------|
@@ -181,11 +181,6 @@ Parameter Description:
 
 
 
-
-
-### Evaluation
-
-The implemented algorithm is evaluated against the baselines based on various metrics such as route diversity, efficiency, and adherence to user-defined cost thresholds.
 
 ## Setup
 
