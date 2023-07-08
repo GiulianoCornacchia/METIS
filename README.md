@@ -8,12 +8,15 @@ ____
 
 ### Authors:
 
-* Giuliano Cornacchia $^{1,2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--2263--7654-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-2263-7654)
+* Giuliano Cornacchia <sup>1,2</sup> [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--2263--7654-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-2263-7654)
 
-* Mirco Nanni $^{2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3534--4332-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-3534-4332)
+* Mirco Nanni <sup>2</sup> [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3534--4332-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-3534-4332)
 
-* Luca Pappalardo $^{2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1547--6007-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1547-6007)
+* Luca Pappalardo <sup>2</sup> [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1547--6007-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1547-6007)
 
+Affiliations:<br>
+<sup>1</sup> University of Pisa and ISTI-CNR, Italy <br>
+<sup>2</sup> ISTI-CNR, Italy
 ____
 ____
   
