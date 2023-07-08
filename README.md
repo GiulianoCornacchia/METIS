@@ -8,11 +8,11 @@ ____
 
 ### Authors:
 
-* Giuliano Cornacchia (University of Pisa / ISTI-CNR) [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--2263--7654-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-2263-7654)
+* Giuliano Cornacchia$^{1,2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--2263--7654-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-2263-7654)
 
-* Mirco Nanni (ISTI-CNR) [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3534--4332-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-3534-4332)
+* Mirco Nanni$^{2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3534--4332-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0003-3534-4332)
 
-* Luca Pappalardo (ISTI-CNR) [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1547--6007-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1547-6007)
+* Luca Pappalardo$^{2}$ [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1547--6007-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-1547-6007)
 
 ____
 ____
