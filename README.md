@@ -19,13 +19,10 @@ We employ SUMO, a mobility simulator, to simulate the impact of the routes gener
 # Table of Contents
 
  - [About](#about)
- 
- - [Abstract](#abstract)
-   
+ - [Abstract](#abstract)   
  - [Usage](#usage)
-
  - [How does METIS work?](#metis)
-
+ - [Baselines](#baselines)
  - [Setup](#setup)
 
 ---
@@ -145,6 +142,45 @@ where $C_r$ is the average of the capacities $C(e)$ of the edges in route $r$, t
 
 By evaluating the route score using this formula, METIS can prioritize routes that demonstrate a balance between popularity and road capacity. This scoring approach helps in selecting the most optimal route, considering various factors such as environmental impact, network efficiency, and user preferences.
 
+
+
+## Baselines
+We evaluate METIS against several one-shot Traffic Assignement solutions, both individual and collective. More in detail, we consider the following baseline algorithms:
+
+1. PP (Path Penalization): Generates alternative routes by penalizing the weights of edges contributing to the fastest path.
+2. GR (Graph Randomization): Generates alternative paths by randomizing the weights of all edges in the road network.
+3. PR (Path Randomization): Generates alternative paths by randomizing only the weights of the edges that were part of the previously computed path.
+4. KD (k-shortest disjointed paths): Returns alternative non-overlapping paths (with no common edges).
+5. PLA (Plateau): Builds shortest-path trees from the origin and destination and identifies common branches (plateaus) to generate alternative paths.
+6. KMD (k-Most Diverse Near Shortest Paths): Generates alternative paths with high dissimilarity while adhering to a cost threshold.
+7. FASTEST (AON): Computes the fastest path assuming free-flow travel times.
+
+
+To apply one of the baseline to a mobility demand use `python compute_matrix.py [arguments]` <br>
+For example: <br>
+  `python compute_matrix.py -a PP -k 5 -n network.net.xml -d demand.json -o ./output/ -t 4`
+
+Parameter Description:
+
+| Parameter   | Description                                                                                           | Required | Default Value | Example                 |
+|-------------|-------------------------------------------------------------------------------------------------------|----------|---------------|-------------------------|
+| algorithm   | The algorithm used for route generation and selection.                                                | Yes      | N/A           | `-a PP`                 |
+| k           | The number of alternative routes to generate.                                                         | Yes      | N/A           | `-k 5`                  |
+| net         | Path to the SUMO road network file.                                                                   | Yes      | N/A           | `-n network.net.xml`    |
+| demand      | Path to the file containing the mobility demand.                                                      | Yes      | N/A           | `-d demand.json`        |
+| p           | The penalization factor for PP algorithm.                                                              | No       | 0             | `-p 0.1`                |
+| u           | The randomization factor for GR algorithm.                                                             | No       | 0             | `-u 0.2`                |
+| e           | The randomization factor for PR and KMDNSP algorithms.                                                 | No       | 0             | `-e 0.3`                |
+| w           | The weight factor for DUA and PLATEAU algorithms.                                                      | No       | 0             | `-w 0.5`                |
+| t           | The number of threads (subprocesses) to run in parallel.                                              | Yes      | N/A           | `-t 4`                  |
+| out         | Output directory path to save the results.                                                            | Yes      | N/A           | `-o ./output/`          |
+| identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
+
+
+
+### Evaluation
+
+The implemented algorithm is evaluated against the baselines based on various metrics such as route diversity, efficiency, and adherence to user-defined cost thresholds.
 
 ## Setup
 
