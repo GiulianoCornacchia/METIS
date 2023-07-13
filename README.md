@@ -1,4 +1,7 @@
-# One-Shot Traffic Assignment with Forward-Looking Penalization
+<div align="center">
+  <h2>One-Shot Traffic Assignment with Forward-Looking Penalization </h2>
+</div>
+
 
 <div align="center">
   <img src="./imgs/METIS.PNG" height="200" />
