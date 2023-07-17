@@ -108,9 +108,9 @@ Parameter Description:
 |---------------|----------------------------------------------------------|----------|---------------|--------------|
 | net | Path to the SUMO road network file.                               | Yes      | N/A              | `-n network.net.xml`|
 | route| Path to the route file.                                           | Yes      | N/A             | `-r network.net.xml` |
-| out| Output folder for the simulation results.                           | No       | `./`          | `-o ./output/`    |
-| sumopath | Path to the folder containing the SUMO simulation scripts.   | No       | `../sumo_simulation_scripts/` | `../sumo_simulation_scripts/` |
-| identifier | Filename identifier for the simulation.                    | No       | `metis`       | `-i metis`      |
+| out| Output folder for the simulation results.                           | No       | "./"          | `-o ./output/`    |
+| sumopath | Path to the folder containing the SUMO simulation scripts.   | No       | "../sumo_simulation_scripts/" | `-s ../sumo_simulation_scripts/` |
+| identifier | Filename identifier for the simulation.                    | No       | "metis"       | `-i metis`      |
 
 
 
