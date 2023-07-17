@@ -98,7 +98,19 @@ Parameter Description:
 
 
 
-3. To simulate with the traffic simulator SUMO the impact of a collection of routes on CO2 emissions, execute the following command:
+3. To simulate with SUMO the impact of a collection of routes on CO2 emissions, execute the following command:
+
+   `python simulate_routes_sumo.py -n network.net -r routes.xml -o output/ -s ../sumo_simulation_scripts/ -i metis`
+
+Parameter Description:
+
+| Parameter     | Description                                              | Required | Default Value | Example      |
+|---------------|----------------------------------------------------------|----------|---------------|--------------|
+| net | Path to the SUMO road network file.                               | Yes      | N/A              | `-n network.net.xml`|
+| route| Path to the route file.                                           | Yes      | N/A             | `-r network.net.xml` |
+| out| Output folder for the simulation results.                           | No       | `./`          | `-o ./output/`    |
+| sumopath | Path to the folder containing the SUMO simulation scripts.   | No       | `../sumo_simulation_scripts/` | `../sumo_simulation_scripts/` |
+| identifier | Filename identifier for the simulation.                    | No       | `metis`       | `-i metis`      |
 
 
 
