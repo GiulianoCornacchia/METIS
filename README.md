@@ -39,8 +39,8 @@ We employ SUMO, a mobility simulator, to simulate the impact of the routes gener
 <a id='toc' name='toc'></a>
 # Table of Contents
 
- - [About](#about)
- - [Abstract](#abstract)   
+ - [Abstract](#abstract)
+ - [Good to Know](#goodtoknow)
  - [Usage](#usage)
  - [How does METIS work?](#metis)
  - [Baselines](#baselines)
@@ -69,11 +69,12 @@ If you use the code in this repository, please cite our paper:
 }
 ```
 
+<a id='abstract' name='abstract'></a>
 ## Abstract
 
 Traffic assignment (TA) is crucial in optimizing transportation systems and consists in efficiently assigning routes to a collection of trips. Existing TA algorithms often do not adequately consider real-time traffic conditions, resulting in inefficient route assignments. This paper introduces METIS, a cooperative, one-shot TA algorithm that combines alternative routing with edge penalization and informed route scoring. We conduct experiments in several cities to evaluate the performance of METIS against state-of-the-art one-shot methods. Compared to the best baseline, METIS significantly reduces CO2 emissions by 18% in Milan, 28\% in Florence, and 46% in Rome, improving trip distribution considerably while still having low computational time. Our study proposes METIS as a promising solution for optimizing TA and urban transportation systems. 
 
-
+<a id='goodtoknow' name='goodtoknow'></a>
 ## Good to know
 
 ### Mobility Demand
@@ -101,6 +102,7 @@ This example includes two trips represented by the vehicle IDs "vehicle_5956" an
 
 Note: The provided snapshot only includes two trips, but in practice, a mobility demand could comprise numerous trips, involving multiple vehicles and varying departure times, reflecting the diverse transportation requirements of individuals or groups.
 
+<a id='usage' name='usage'></a>
 ## Usage
 
 1. Install the required dependencies in the provided requirements.txt
@@ -141,7 +143,7 @@ Parameter Description:
 | identifier | Filename identifier for the simulation.                    | No       | "metis"       | `-i metis`      |
 
 
-
+<a id='metis' name='metis'></a>
 ## HOW DOES METIS WORK?
 
 METIS is a one-shot Traffic Assignment algorithm designed to optimize routing decisions in transportation systems. It aims to minimize CO2 emissions and improve overall network performance by assigning routes to trips.
@@ -203,7 +205,7 @@ where $C_r$ is the average of the capacities $C(e)$ of the edges in route $r$, t
 By evaluating the route score using this formula, METIS can prioritize routes that demonstrate a balance between popularity and road capacity. This scoring approach helps in selecting the most optimal route, considering various factors such as environmental impact, network efficiency, and user preferences.
 
 
-
+<a id='baselines' name='baselines'></a>
 ## Baselines
 We evaluate METIS against several one-shot Traffic Assignement solutions, both individual and collective in terms of road coverage, redundancy, total CO2 (see sect. measures for detail). More precisely, we consider the following baseline algorithms:
 
@@ -237,7 +239,7 @@ Parameter Description:
 | out         | Output directory path to save the results.                                                            | Yes      | N/A           | `-o ./output/`          |
 | identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
 
-
+<a id='comparison' name='comparison'></a>
 ## Comparison with METIS
 
 If a user wants to compare a TA algorithm against METIS **without** using the simulator tool SUMO (avoiding onerous time-consuming simulations) as a first assessment, he/she can compute the set of routes using its algorithm and then by only computing the 5-min redundancy is is possible to estimate the CO2 emissions. We found that time redundancy is crucial to assess the impact of TA (Traffic Assignment) solutions, as there exist high correlations between time redundancy and CO2 emissions in Florence (𝑟 = 0.92) and Milan (𝑟 = 0.98), and a moderate correlation in Rome (𝑟 = 0.52).
@@ -251,6 +253,7 @@ This means that, by utilizing the following equations, we can estimate the CO2 e
 However, for a more reliable comparison, it is recommended to use SUMO and compare the total CO2 emission computed during the simulation.
 
 
+<a id='setup' name='setup'></a>
 ## Setup
 
 ## How to install and configure SUMO (Simulation of Urban MObility) 🚗🚙🛻
