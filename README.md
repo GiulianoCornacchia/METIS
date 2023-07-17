@@ -74,6 +74,33 @@ If you use the code in this repository, please cite our paper:
 Traffic assignment (TA) is crucial in optimizing transportation systems and consists in efficiently assigning routes to a collection of trips. Existing TA algorithms often do not adequately consider real-time traffic conditions, resulting in inefficient route assignments. This paper introduces METIS, a cooperative, one-shot TA algorithm that combines alternative routing with edge penalization and informed route scoring. We conduct experiments in several cities to evaluate the performance of METIS against state-of-the-art one-shot methods. Compared to the best baseline, METIS significantly reduces CO2 emissions by 18% in Milan, 28\% in Florence, and 46% in Rome, improving trip distribution considerably while still having low computational time. Our study proposes METIS as a promising solution for optimizing TA and urban transportation systems. 
 
 
+## Good to know
+
+### Mobility Demand
+
+A mobility demand refers to the transportation needs and preferences of individuals or groups, typically represented as a time-ordered collection of trips. 
+Each trip within a mobility demand is defined by its origin, destination, and departure time.
+In our work we model a mobility demand as a Pyhton dictionary in which each key is the vehicle identifier and its value contains the trip's details.
+
+```
+{
+  "vehicle_5956": {
+    "edges": ["-168436709", "843932181#0"],
+    "time": 180.0,
+    "via": false
+  },
+  "vehicle_7133": {
+    "edges": ["26682439", "348439788#0"],
+    "time": 180.0,
+    "via": false,
+  }
+...
+}
+```
+This example includes two trips represented by the vehicle IDs "vehicle_5956" and "vehicle_7133". Each trip contains information about the `edges` (origin and destination), `time` (departure time), and `via` (whether the trip includes any intermediate stops).
+
+Note: The provided snapshot only includes two trips, but in practice, a mobility demand could comprise numerous trips, involving multiple vehicles and varying departure times, reflecting the diverse transportation requirements of individuals or groups.
+
 ## Usage
 
 1. Install the required dependencies in the provided requirements.txt
