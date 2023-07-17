@@ -218,9 +218,9 @@ If a user wants to compare a TA algorithm against METIS **without** using the si
 
 This means that, by utilizing the following equations, we can estimate the CO2 emissions of TA algorithms based solely on the characteristics of the generated routes $R$ without the need for time-consuming simulations:
 
-    Florence: $CO2(R) = 9.8 \cdot red(R) - 53.1
-    Milan: $CO2(R) = 25.8 \cdot red(R) - 115.3
-    Rome: $CO2(R) = 11.2x \cdot red(R) + 46.9
+*Florence*: $CO2(R) = 9.8 \cdot red(R) - 53.1$
+*Milan*: $CO2(R) = 25.8 \cdot red(R) - 115.3$
+*Rome*: $CO2(R) = 11.2x \cdot red(R) + 46.9$
 
 However, for a more reliable comparison, it is recommended to use SUMO and compare the total CO2 emission computed during the simulation.
 
