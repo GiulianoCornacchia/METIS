@@ -188,7 +188,6 @@ We evaluate METIS against several one-shot Traffic Assignement solutions, both i
 | KD          | 𝑘-shortest disjointed paths: Returns alternative non-overlapping paths (with no common edges).                                                                      |
 | PLA         | Plateau: Builds shortest-path trees from the origin and destination and identifies common branches (plateaus) to generate alternative paths.                        |
 | KMDNSP      | 𝑘-Most Diverse Near Shortest Paths: Generates alternative paths with high dissimilarity while adhering to a user-defined cost threshold.                               |
-
 | FASTEST     | Computes the fastest path between the origin and destination assuming free-flow travel times.                                                                    |
 
 To apply one of the baseline to a mobility demand use `python compute_matrix.py [arguments]` <br>
@@ -220,7 +219,7 @@ This means that, by utilizing the following equations, we can estimate the CO2 e
 <br><br>
 *Florence*: $CO2(R) = 9.8 \cdot red(R) - 53.1$ <br>
 *Milan*: $CO2(R) = 25.8 \cdot red(R) - 115.3$ <br>
-*Rome*: $CO2(R) = 11.2x \cdot red(R) + 46.9$ <br>
+*Rome*: $CO2(R) = 11.2 \cdot red(R) + 46.9$ <br>
 
 However, for a more reliable comparison, it is recommended to use SUMO and compare the total CO2 emission computed during the simulation.
 
