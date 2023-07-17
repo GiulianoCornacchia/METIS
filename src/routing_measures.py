@@ -175,3 +175,39 @@ def compute_k_road(mds):
         k_road[edge] = len(mds_dict)
         
     return k_road
+
+
+
+def split_interval_sliding(a, b, s, slide):
+    intervals = []
+    current = a
+
+    while current + s <= b:
+        intervals.append([current, current + s])
+        current += slide
+
+    intervals[-1][1] += 1
+
+    return intervals
+
+
+def compute_temp_redundancy_sliding(dict_md, dict_path_tmp_red, window_s, slide):
+
+    # compute high and low
+    tt_list = [dict_md[k]["time"] for k in dict_md]
+    
+    low = min(tt_list)
+    high = max(tt_list)
+      
+    intervals = split_interval_sliding(low, high, window_s, slide)
+        
+    red_list = []
+    
+    for (i, j) in intervals:
+        
+        vehicles_id_split = [int(k.split("_")[1]) for k in dict_md if i<=dict_md[k]["time"]<j]
+        paths_split = [dict_path_tmp_red[k] for k in vehicles_id_split]
+        
+        red_list.append(redundancy(paths_split))
+                
+    return red_list
