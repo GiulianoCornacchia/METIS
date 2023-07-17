@@ -44,6 +44,7 @@ We employ SUMO, a mobility simulator, to simulate the impact of the routes gener
  - [Usage](#usage)
  - [How does METIS work?](#metis)
  - [Baselines](#baselines)
+ - [Comparison w METIS](#comparison)
  - [Setup](#setup)
 ---
 
@@ -211,7 +212,17 @@ Parameter Description:
 | identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
 
 
+## Comparison w METIS
 
+If a user wants to compare a TA algorithm against METIS **without** using the simulator tool SUMO (avoiding onerous time-consuming simulations) as a first assessment, he/she can compute the set of routes using its algorithm and then by only computing the 5-min redundancy is is possible to estimate the CO2 emissions. We found that time redundancy is crucial to assess the impact of TA (Traffic Assignment) solutions, as there exist high correlations between time redundancy and CO2 emissions in Florence (𝑟 = 0.92) and Milan (𝑟 = 0.98), and a moderate correlation in Rome (𝑟 = 0.52).
+
+This means that, by utilizing the following equations, we can estimate the CO2 emissions of TA algorithms based solely on the characteristics of the generated routes $R$ without the need for time-consuming simulations:
+
+    Florence: $CO2(R) = 9.8 \cdot red(R) - 53.1
+    Milan: $CO2(R) = 25.8 \cdot red(R) - 115.3
+    Rome: $CO2(R) = 11.2x \cdot red(R) + 46.9
+
+However, for a more reliable comparison, it is recommended to use SUMO and compare the total CO2 emission computed during the simulation.
 
 
 ## Setup
