@@ -77,7 +77,7 @@ Traffic assignment (TA) is crucial in optimizing transportation systems and cons
 <a id='goodtoknow' name='goodtoknow'></a>
 ## Good to know
 
-### Mobility Demand
+### What is a Mobility Demand?
 
 A mobility demand refers to the transportation needs and preferences of individuals or groups, typically represented as a time-ordered collection of trips. 
 Each trip within a mobility demand is defined by its origin, destination, and departure time.
