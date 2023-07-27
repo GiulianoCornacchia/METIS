@@ -77,7 +77,7 @@ Traffic assignment (TA) is crucial in optimizing transportation systems and cons
 <a id='goodtoknow' name='goodtoknow'></a>
 ## Good to know
 
-### Mobility Demand
+### What is a Mobility Demand?
 
 A mobility demand refers to the transportation needs and preferences of individuals or groups, typically represented as a time-ordered collection of trips. 
 Each trip within a mobility demand is defined by its origin, destination, and departure time.
@@ -238,6 +238,23 @@ Parameter Description:
 | t           | The number of threads (subprocesses) to run in parallel.                                              | Yes      | N/A           | `-t 4`                  |
 | out         | Output directory path to save the results.                                                            | Yes      | N/A           | `-o ./output/`          |
 | identifier  | Identifier for the output files (default: empty string).                                               | No       | N/A           | `-i city1`              |
+
+
+<a id="results" name="results"></a>
+We conduct experiments in three Italian cities: Milan, Rome, and Florence. 
+These cities represented diverse urban environments with varying traffic dynamics, sizes, and road networks.
+
+METIS demonstrates significant contributions and superior performance compared to various baselines emerging as a significant breakthrough, with impressive reductions of CO2 emissions of 28% in Florence, 18% in Milan, and 46% in Rome compared to the best baseline. These impressive results stem from the synergistic combination of METIS's core components: FLEP, KMD, and route scoring. FLEP accurately estimates vehicle positions and adjusts edge weights for less congested routes. KMD provides diverse alternative routes, effectively covering the road network. Route scoring prioritizes high-capacity, less popular routes, promoting smoother traffic flow.
+
+METIS excels in road coverage, especially in Florence (79.66%) and Milan (86.68%). In Rome, it achieves the second-highest road coverage (48.51%). Additionally, METIS demonstrates low time redundancy, with the lowest values observed in Florence (7.81) and Milan (7.41) and the second lowest in Rome (5.57), indicating an efficient route allocation, as the number of routes on each edge within a 5-minute temporal window is relatively low.
+
+Among the baselines, GR achieves the lowest CO2 emissions in Florence, while KMD outperforms others in Milan and Rome. GR exhibits high road coverage in all three cities, surpassing METIS in Rome. KD and PLA have high road coverage and time redundancy, leading to elevated CO2 emissions. Despite their simplicity, AON and ITA achieve comparable CO2 emissions to edge-weight methods (PP, PR, and GR).
+These results underscore METIS's superiority in reducing CO2 emissions, achieving high road coverage, minimizing time redundancy, and improving overall routing efficiency.
+
+
+
+
+
 
 <a id='comparison' name='comparison'></a>
 ## Comparison with METIS
