@@ -4,7 +4,7 @@ import sumolib
 import numpy as np
 import folium
 import warnings
-
+import seaborn as sns
 from tqdm.notebook import tqdm
 
 from typing import List
