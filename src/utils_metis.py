@@ -181,7 +181,10 @@ def compute_dict_edge_to_tile(road_network, tile_size):
     # Create a GeoDataFrame with a single row containing the polygon
     data = {'geometry': [polygon]}
     gdf = gpd.GeoDataFrame(data)
-    tessellation_gdf = gpd.GeoDataFrame(gdf, crs="EPSG:4326")
+    tessellation_gdf = gdf.set_crs("EPSG:4326", allow_override=True)
+    
+    # Obsolete: may not work with the new version of GeoPandas
+    #tessellation_gdf = gpd.GeoDataFrame(gdf, crs="EPSG:4326")
     
     tessellation = tilers.tiler.get("squared", base_shape=tessellation_gdf, meters=tile_size)
     
